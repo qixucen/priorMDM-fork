@@ -52,7 +52,7 @@ pip install openai-clip=1.0.1
 pip install git+https://github.com/GuyTevet/smplx.git
 ```
 
-The following shell command is replaced.
+The following shell command is replaced by righe version.
 ```shell
 pip install git+https://github.com/openai/CLIP.git
 python -m spacy download en_core_web_sm
