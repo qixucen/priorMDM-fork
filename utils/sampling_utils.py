@@ -31,7 +31,7 @@ def double_take_arb_len(args, diffusion, model, model_kwargs, n_frames, eval_mod
 
     transition = torch.zeros(n_frames)
     transition[:args.handshake_size] = 1.  #[T0 T0 M1 M1 M1 M1 M1 M1 T1 T1] Motion sanwitch
-    transition = torch.tile(transition.unsqueeze(0), dims=(batch_size, 1))
+    transition = transition.unsqueeze(0).repeat(batch_size, 1, 1)
     transition[0, :args.handshake_size] = 0
     for ii in range(batch_size - 1):
         transition[ii,
@@ -100,7 +100,7 @@ def double_take_arb_len(args, diffusion, model, model_kwargs, n_frames, eval_mod
 
         transition_orig = deepcopy(model_kwargs['y']['is_transition'])
         transition = torch.zeros(new_sample_seq_len)
-        transition = torch.tile(transition.unsqueeze(0), dims=(bs-1, 1))
+        transition = transition.unsqueeze(0).repeat(bs - 1, 1, 1)
         model_kwargs['y']['is_transition'] = transition
         model_kwargs['y']['uncond'] = 1.0
         last_text = model_kwargs['y']['text'][-1]
