@@ -47,10 +47,11 @@ Setup conda env:
 ```shell
 conda env create -f environment.yml
 conda activate PriorMDM
-pip install en_core_web_sm.3.4.0.zip (Zip file is available on https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz)
+pip install en_core_web_sm.3.4.0.zip
 pip install openai-clip=1.0.1
 pip install git+https://github.com/GuyTevet/smplx.git
 ```
+Zip file is available on https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz
 
 The following shell command is replaced by righe version.
 ```shell
