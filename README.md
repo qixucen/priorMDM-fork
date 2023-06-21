@@ -50,6 +50,7 @@ conda activate PriorMDM
 pip install en_core_web_sm.3.4.0.zip
 pip install openai-clip=1.0.1
 pip install git+https://github.com/GuyTevet/smplx.git
+pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 Zip file is available on https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz
 
