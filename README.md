@@ -47,11 +47,15 @@ Setup conda env:
 ```shell
 conda env create -f environment.yml
 conda activate PriorMDM
-# python -m spacy download en_core_web_sm
 pip install en_core_web_sm.3.4.0.zip (Zip file is available on https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz)
-# pip install git+https://github.com/openai/CLIP.git
 pip install openai-clip=1.0.1
 pip install git+https://github.com/GuyTevet/smplx.git
+```
+
+The following shell command is replaced.
+```shell
+pip install git+https://github.com/openai/CLIP.git
+python -m spacy download en_core_web_sm
 ```
 
 ### 2. Get MDM dependencies
